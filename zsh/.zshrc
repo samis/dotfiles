@@ -95,7 +95,8 @@ alias nano="emacs -nw"
 alias vim="emacs -nw"
 alias gvim="emacs"
 alias ls="ls --color=auto"
-alias in-dotfiles='() { pushd -q ~/dotfiles && { $@; popd -q } } '
+alias in-dotfiles='() {( cd ~/dotfiles; $@)} '
+alias ind=in-dotfiles
 # Start the gpg-agent if not already running
 if ! pgrep -x -u "${USER}" gpg-agent  >/dev/null 2>&1; then
     gpg-connect-agent /bye >/dev/null 2>&1
