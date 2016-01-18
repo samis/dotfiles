@@ -49,7 +49,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitignore)
+plugins=(gitignore gpg-agent git-extras sprunge web-search colored-man-pages extract safe-paste )
 
 # User configuration
 
@@ -61,11 +61,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
+ if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='nano'
-# fi
+ else
+   export EDITOR='emacsclient'
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -86,31 +86,12 @@ POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="black"
 POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND="red"
 POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND="white"
 POWERLEVEL9K_HISTORY_BACKGROUND='238'
+export ALTERNATE_EDITOR=""
 #export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-
-source ~/.xsh
-source /etc/profile.d/emscripten.sh
-alias emacs="emacs --no-splash"
-alias nano="emacs -nw"
-alias vim="emacs -nw"
-alias gvim="emacs"
+alias emacs=emacsclient
+alias nano=emacs
+#source ~/.xsh
+#source /etc/profile.d/emscripten.sh
 alias ls="ls --color=auto"
 alias in-dotfiles='() {( cd ~/dotfiles; $@)} '
 alias ind=in-dotfiles
-# Start the gpg-agent if not already running
-if ! pgrep -x -u "${USER}" gpg-agent  >/dev/null 2>&1; then
-    gpg-connect-agent /bye >/dev/null 2>&1
-fi
-
-# Set SSH to use gpg-agent
-unset SSH_AGENT_PID
-if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
-    export SSH_AUTH_SOCK="${HOME}/.gnupg/S.gpg-agent.ssh"
-fi
-
-# Set GPG TTY
-GPG_TTY=$(tty)
-export GPG_TTY
-
-# Refresh gpg-agent tty in case user switches into an X session
-gpg-connect-agent updatestartuptty /bye >/dev/null
