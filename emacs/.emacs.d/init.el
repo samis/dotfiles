@@ -1,4 +1,4 @@
-
+(setq vc-follow-symlinks nil)
 (add-hook 'after-init-hook 'packages-init-hook)
 (defun packages-init-hook ()
   (require 'ergoemacs-mode)
