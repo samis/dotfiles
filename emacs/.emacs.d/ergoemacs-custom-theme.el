@@ -22,12 +22,8 @@
                 ergoemacs-remaps
                 standard-vars)
   :optional-on '(tab-indents-region
-                 backspace-del-seq
-                 backspace-is-back
                  fixed-bold-italic
                  standard-fixed
-                 quit
-                 save-options-on-exit
                  ;; Reverse menu-bar order
                  menu-bar-help
                  menu-bar-languages
@@ -37,5 +33,5 @@
                  menu-bar-file
                  )
   :optional-off '(move-sexp)
-  :options-menu '(("Standard Keys" (standard-fixed fixed-bold-italic quit))
+  :options-menu '(("Standard Keys" (standard-fixed fixed-bold-italic))
                   ("Menus" (menu-bar-file menu-bar-edit menu-bar-search menu-bar-view menu-bar-languages menu-bar-help))))
