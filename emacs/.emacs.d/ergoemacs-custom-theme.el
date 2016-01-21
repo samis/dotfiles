@@ -23,7 +23,6 @@
                 standard-vars)
   :optional-on '(apps-punctuation
                  tab-indents-region
-                 icy-reclaim
                  apps-apps
                  apps-toggle
                  apps
@@ -33,9 +32,6 @@
                  f2-edit
                  fixed-bold-italic
                  standard-fixed
-                 ido-remaps
-                 helm-remaps
-                 multiple-cursors-remaps
                  quit
                  apps-swap
                  save-options-on-exit
