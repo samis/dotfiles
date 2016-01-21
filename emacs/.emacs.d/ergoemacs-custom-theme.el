@@ -8,10 +8,6 @@
                 help
                 kill-line
                 move-bracket
-                move-buffer
-                move-char
-                move-line
-                move-word
                 switch
                 ergoemacs-remaps
                 standard-vars)
