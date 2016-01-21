@@ -7,7 +7,6 @@
                 fixed-newline
                 help
                 kill-line
-                misc
                 move-bracket
                 move-buffer
                 move-char
@@ -16,9 +15,7 @@
                 move-paragraph
                 move-word
                 search
-                select-items
                 switch
-                text-transform
                 ergoemacs-remaps
                 standard-vars)
   :optional-on '(tab-indents-region
