@@ -11,10 +11,7 @@
                 move-buffer
                 move-char
                 move-line
-                move-page
-                move-paragraph
                 move-word
-                search
                 switch
                 ergoemacs-remaps
                 standard-vars)
