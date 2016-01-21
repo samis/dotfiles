@@ -1,6 +1,5 @@
 (ergoemacs-theme custom ()
   "My custom Ergoemacs theme mostly based around the basic CUA/Windows shortcuts"
-  :based-on 'standard
   :components '(copy
                 dired-tab
                 dired-to-wdired
@@ -48,13 +47,10 @@
                  menu-bar-edit
                  menu-bar-file
                  )
-  :optional-off '(alt-backspace-is-undo
-                  move-and-transpose-lines
-                  move-sexp
-                  ido-prev-next-instead-of-left-right)
+  :optional-off '(move-sexp)
   :options-menu '(("Menu/Apps Key" (apps apps-apps apps-punctuation apps-toggle))
                   ("Function Keys" (fn-keys f2-edit))
-                  ("Standard Keys" (standard-fixed fixed-bold-italic quit move-and-transpose-lines alt-backspace-is-undo))
+                  ("Standard Keys" (standard-fixed fixed-bold-italic quit))
                   ("Keys during Key Sequence" (f2-edit apps-swap backspace-del-seq))
-                  ("Disputed Keys" (ido-prev-next-instead-of-left-right move-sexp))
+                  ("Disputed Keys" (move-sexp))
                   ("Menus" (menu-bar-file menu-bar-edit menu-bar-search menu-bar-view menu-bar-languages menu-bar-help))))
