@@ -24,8 +24,6 @@
   :optional-on '(tab-indents-region
                  backspace-del-seq
                  backspace-is-back
-                 fn-keys
-                 f2-edit
                  fixed-bold-italic
                  standard-fixed
                  quit
@@ -39,8 +37,7 @@
                  menu-bar-file
                  )
   :optional-off '(move-sexp)
-  :options-menu '(("Function Keys" (fn-keys f2-edit))
-                  ("Standard Keys" (standard-fixed fixed-bold-italic quit))
-                  ("Keys during Key Sequence" (f2-edit backspace-del-seq))
+  :options-menu '(("Standard Keys" (standard-fixed fixed-bold-italic quit))
+                  ("Keys during Key Sequence" (backspace-del-seq))
                   ("Disputed Keys" (move-sexp))
                   ("Menus" (menu-bar-file menu-bar-edit menu-bar-search menu-bar-view menu-bar-languages menu-bar-help))))
