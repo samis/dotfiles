@@ -21,11 +21,7 @@
                 text-transform
                 ergoemacs-remaps
                 standard-vars)
-  :optional-on '(apps-punctuation
-                 tab-indents-region
-                 apps-apps
-                 apps-toggle
-                 apps
+  :optional-on '(tab-indents-region
                  backspace-del-seq
                  backspace-is-back
                  fn-keys
@@ -33,7 +29,6 @@
                  fixed-bold-italic
                  standard-fixed
                  quit
-                 apps-swap
                  save-options-on-exit
                  ;; Reverse menu-bar order
                  menu-bar-help
@@ -44,9 +39,8 @@
                  menu-bar-file
                  )
   :optional-off '(move-sexp)
-  :options-menu '(("Menu/Apps Key" (apps apps-apps apps-punctuation apps-toggle))
-                  ("Function Keys" (fn-keys f2-edit))
+  :options-menu '(("Function Keys" (fn-keys f2-edit))
                   ("Standard Keys" (standard-fixed fixed-bold-italic quit))
-                  ("Keys during Key Sequence" (f2-edit apps-swap backspace-del-seq))
+                  ("Keys during Key Sequence" (f2-edit backspace-del-seq))
                   ("Disputed Keys" (move-sexp))
                   ("Menus" (menu-bar-file menu-bar-edit menu-bar-search menu-bar-view menu-bar-languages menu-bar-help))))
