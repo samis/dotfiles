@@ -38,6 +38,4 @@
                  )
   :optional-off '(move-sexp)
   :options-menu '(("Standard Keys" (standard-fixed fixed-bold-italic quit))
-                  ("Keys during Key Sequence" (backspace-del-seq))
-                  ("Disputed Keys" (move-sexp))
                   ("Menus" (menu-bar-file menu-bar-edit menu-bar-search menu-bar-view menu-bar-languages menu-bar-help))))
