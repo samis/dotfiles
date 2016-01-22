@@ -5,7 +5,7 @@
 
 ;;; Code:
 
-(ergoemacs-theme custom ()
+(ergoemacs-theme CUA ()
   "My custom Ergoemacs theme mostly based around the basic CUA/Windows shortcuts"
   :components '(move-bracket standard-fixed ergoemacs-remaps standard-vars)
   ; For menu bars, the order is reversed.

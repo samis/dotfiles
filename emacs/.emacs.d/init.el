@@ -6,11 +6,10 @@
                          ("melpa" . "https://melpa.org/packages/")))
 (defun packages-init-hook ()
   (load-theme 'monokai t)
-  (setq ergoemacs-theme "custom")
+  (setq ergoemacs-theme "CUA")
   (setq ergoemacs-keyboard-layout "gb")
   (require 'ergoemacs-mode)
   (load-file "~/.emacs.d/ergoemacs-custom-theme.el")
-  
   (ergoemacs-mode 1))
 
 (custom-set-variables
