@@ -8,7 +8,7 @@
     (eval-print-last-sexp)))
 
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-(setq my-packages '(el-get))
+(setq my-packages '(el-get markdown-mode ergoemacs-mode monokai-theme magit undo-tree unicode-fonts))
 (setq el-get-packages
       (append my-packages
               (mapcar #'el-get-source-name el-get-sources)))
