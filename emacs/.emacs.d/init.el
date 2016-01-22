@@ -1,4 +1,5 @@
 (setq vc-follow-symlinks nil)
+(tool-bar-mode -1)
 (add-hook 'after-init-hook 'packages-init-hook)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
@@ -9,6 +10,7 @@
   (setq ergoemacs-keyboard-layout "gb")
   (require 'ergoemacs-mode)
   (load-file "~/.emacs.d/ergoemacs-custom-theme.el")
+  
   (ergoemacs-mode 1))
 
 (custom-set-variables
