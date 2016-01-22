@@ -8,7 +8,11 @@
     (eval-print-last-sexp)))
 
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-(el-get 'sync)
+(setq my-packages '(el-get))
+(setq el-get-packages
+      (append my-packages
+              (mapcar #'el-get-source-name el-get-sources)))
+(el-get 'sync el-get-packages)
 (setq vc-follow-symlinks nil)
 (tool-bar-mode -1)
 (add-hook 'after-init-hook 'packages-init-hook)
