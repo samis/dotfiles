@@ -1,5 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-
+(setq el-get-user-package-directory "~/.emacs.d/configuration")
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
@@ -20,12 +20,7 @@
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
 (defun packages-init-hook ()
-  (load-theme 'monokai t)
-  (setq ergoemacs-theme "CUA")
-  (setq ergoemacs-keyboard-layout "gb")
-  (require 'ergoemacs-mode)
-  (load-file "~/.emacs.d/ergoemacs-custom-theme.el")
-  (ergoemacs-mode 1))
+  (load-theme 'monokai t))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

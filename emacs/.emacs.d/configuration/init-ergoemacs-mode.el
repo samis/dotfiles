@@ -1,0 +1,5 @@
+  (setq ergoemacs-theme "CUA")
+  (setq ergoemacs-keyboard-layout "gb")
+  (require 'ergoemacs-mode)
+  (load-file "~/.emacs.d/ergoemacs-custom-theme.el")
+  (ergoemacs-mode 1)
