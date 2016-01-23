@@ -1,5 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (setq el-get-user-package-directory "~/.emacs.d/configuration")
+(set-face-attribute 'default nil :family "Input Mono Compressed" :height 98)
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
@@ -28,10 +29,3 @@
  '(scroll-error-top-bottom nil)
  '(set-mark-command-repeat-pop nil)
  '(shift-select-mode t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:weight normal :height 98 :width extra-condensed :foundry "unknown" :family "Input Mono Compressed" :slant normal))))
- '(variable-pitch ((t (:family "Input Sans Compressed")))))
