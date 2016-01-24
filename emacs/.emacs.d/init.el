@@ -20,3 +20,5 @@
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
+(setq custom-file "~/.emacs.d/configuration/init-customize.el")
+(load custom-file)
