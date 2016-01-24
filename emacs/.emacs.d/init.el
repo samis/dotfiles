@@ -33,11 +33,4 @@
  ;; If there is more than one, they won't work right.
  '(mode-line ((t (:background "green" :foreground "black" :box (:line-width 1 :color "#3E3D31" :style unspecified)))))
  '(mode-line-buffer-id ((t (:foreground "black" :weight bold))))
- '(mode-line-inactive ((t (:background "dark green" :foreground "black" :box (:line-width 1 :color "#3E3D31" :style unspecified)))))
- '(powerline-active1 ((t (:background "yellow" :foreground "black"))))
- '(powerline-inactive1 ((t (:background "yellow4" :foreground "black"))))
- '(powerline-inactive2 ((t (:background "dim gray"))))
- '(spaceline-highlight-face ((t (:background "black" :foreground "green" :inherit (quote mode-line)))))
- '(spaceline-modified ((t (:background "red3" :foreground "yellow" :inherit (quote mode-line)))))
- '(spaceline-read-only ((t (:background "black" :foreground "green" :inherit (quote mode-line)))))
- '(spaceline-unmodified ((t (:background "black" :foreground "green" :inherit (quote mode-line))))))
+ '(mode-line-inactive ((t (:background "dark green" :foreground "black" :box (:line-width 1 :color "#3E3D31" :style unspecified))))))

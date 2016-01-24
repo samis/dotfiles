@@ -12,4 +12,8 @@ ADDITIONAL-SEGMENTS are inserted on the right, between `global' and
            :face highlight-face)
          '(buffer-id buffer-size remote-host)
          additional-segments))
+(set-face-attribute 'spaceline-highlight-face nil :background "black" :foreground "green" :inherit 'mode-line)
+(set-face-attribute 'spaceline-modified nil :background "red3" :foreground "yellow" :inherit 'mode-line)
+(set-face-attribute 'spaceline-read-only nil :background "black" :foreground "green" :inherit 'mode-line)
+(set-face-attribute 'spaceline-unmodified nil :background "black" :foreground "green" :inherit 'mode-line)
 (spaceline-emacs-theme)
