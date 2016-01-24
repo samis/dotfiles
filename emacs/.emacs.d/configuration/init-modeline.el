@@ -1,0 +1,5 @@
+(set-face-attribute 'mode-line nil :background "green" :foreground "black")
+(set-face-attribute 'mode-line nil :box '(:line-width 1 :color "#3E3D31" :style 'unspecified))
+(set-face-attribute 'mode-line-buffer-id nil :foreground "black" :weight 'bold)
+(set-face-attribute 'mode-line-inactive nil :background "dark green" :foreground "black")
+(set-face-attribute 'mode-line-inactive nil :box '(:line-width 1 :color "#3E3D31" :style 'unspecified))
