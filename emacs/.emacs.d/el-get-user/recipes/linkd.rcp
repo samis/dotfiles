@@ -1,4 +1,5 @@
 (:name linkd
        :type emacswiki
        :description "Make hypertext with active links in any buffer"
-       :website "https://raw.github.com/emacsmirror/emacswiki.org/master/linkd.el")
+       :website "https://raw.github.com/emacsmirror/emacswiki.org/master/linkd.el"
+       :prepare (autoload 'linkd-mode "linkd.el" "Linkd minor mode." t))
