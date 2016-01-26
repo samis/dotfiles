@@ -9,7 +9,7 @@
     (eval-print-last-sexp)))
 
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-(setq my-packages '(el-get monokai-theme markdown-mode magit undo-tree unicode-fonts spaceline info+ linkd))
+(setq my-packages '(el-get monokai-theme markdown-mode magit ergoemacs-mode undo-tree unicode-fonts spaceline info+ linkd))
 (setq el-get-packages
       (append my-packages
               (mapcar #'el-get-source-name el-get-sources)))
@@ -20,11 +20,7 @@
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
+(cua-mode 1)
+(global-undo-tree-mode 1)
 (setq custom-file "~/.emacs.d/configuration/init-customize.el")
 (load custom-file)
-(cua-mode 1)
-(global-set-key (kbd "C-f") 'isearch-forward) ; Find. was forward-char
-(global-set-key (kbd "C-o") 'find-file)        ; Open. was open-line
-(global-set-key (kbd "C-s") 'save-buffer)  ; Save. was isearch-forward
-(global-set-key (kbd "C-w") 'kill-this-buffer)  ; Close. was kill-region
-(global-set-key (kbd "C-z") 'undo)         ; Undo. was suspend-frame
