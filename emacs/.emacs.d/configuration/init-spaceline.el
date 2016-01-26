@@ -17,3 +17,4 @@ ADDITIONAL-SEGMENTS are inserted on the right, between `global' and
 (set-face-attribute 'spaceline-read-only nil :background "black" :foreground "green" :inherit 'mode-line)
 (set-face-attribute 'spaceline-unmodified nil :background "black" :foreground "green" :inherit 'mode-line)
 (spaceline-emacs-theme)
+(spaceline-info-mode)
