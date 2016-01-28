@@ -95,3 +95,4 @@ alias nano=emacs
 alias ls="ls --color=auto"
 alias in-dotfiles='() {( cd ~/dotfiles; $@)} '
 alias ind=in-dotfiles
+source ~/.guix-profile/etc/profile
