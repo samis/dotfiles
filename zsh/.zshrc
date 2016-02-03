@@ -95,4 +95,7 @@ alias nano=emacs
 alias ls="ls --color=auto"
 alias in-dotfiles='() {( cd ~/dotfiles; $@)} '
 alias ind=in-dotfiles
-source ~/.guix-profile/etc/profile
+export PATH=/home/samis/.gem/yysfm7g9f8qlllimbdp96d821lqhdx8h-ruby-2.3.0/2.3.0/bin:/home/samis/.guix-profile/bin:/home/samis/.cabal/bin:/home/samis/.gem/ruby/2.3.0/bin:/usr/local/heroku/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+export GEM_PATH=/home/samis/.gem/yysfm7g9f8qlllimbdp96d821lqhdx8h-ruby-2.3.0/2.3.0:/home/samis/.guix-profile/lib/ruby/gems/2.3.0/
+export GEM_HOME=/home/samis/.gem/yysfm7g9f8qlllimbdp96d821lqhdx8h-ruby-2.3.0/2.3.0
+export GEM_SPEC_CACHE=/home/samis/.gem/yysfm7g9f8qlllimbdp96d821lqhdx8h-ruby-2.3.0/specs
