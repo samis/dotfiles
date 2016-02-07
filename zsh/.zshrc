@@ -53,7 +53,6 @@ plugins=(gitignore gpg-agent git-extras sprunge web-search colored-man-pages ext
 
 # User configuration
 
-export PATH="/home/samis/.cabal/bin:/home/samis/.gem/ruby/2.3.0/bin:/usr/local/heroku/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
 
@@ -99,3 +98,16 @@ export PATH=/home/samis/.gem/yysfm7g9f8qlllimbdp96d821lqhdx8h-ruby-2.3.0/2.3.0/b
 export GEM_PATH=/home/samis/.gem/yysfm7g9f8qlllimbdp96d821lqhdx8h-ruby-2.3.0/2.3.0:/home/samis/.guix-profile/lib/ruby/gems/2.3.0/
 export GEM_HOME=/home/samis/.gem/yysfm7g9f8qlllimbdp96d821lqhdx8h-ruby-2.3.0/2.3.0
 export GEM_SPEC_CACHE=/home/samis/.gem/yysfm7g9f8qlllimbdp96d821lqhdx8h-ruby-2.3.0/specs
+export ORIG_PATH=$PATH
+export ORIG_GPATH=$GEM_PATH
+export ORIG_GHOME=$GEM_HOME
+export ORIG_GSPEC_CACHE=$GEM_SPEC_CACHE
+chef-mode() {
+    eval "$(chef shell-init zsh)"
+}
+chef-mode-off() {
+    export PATH=$ORIG_PATH
+    export GEM_PATH=$ORIG_GPATH
+    export GEM_HOME=$ORIG_GHOME
+    export GEM_SPEC_CACHE=$ORIG_GSPEC_CACHE
+}
