@@ -2,6 +2,11 @@
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
 (setq el-get-user-package-directory "~/.emacs.d/configuration")
 (set-face-attribute 'default nil :family "Input Mono Compressed" :height 98)
+(defun set-emoji-font (frame)
+"Adjust the font settings of FRAME so Emacs can display emoji properly."
+  (set-fontset-font t 'symbol (font-spec :family "Symbola") frame ))
+(set-emoji-font nil)
+(add-hook 'after-make-frame-functions 'set-emoji-font)
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
