@@ -15,7 +15,7 @@
     (eval-print-last-sexp)))
 
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-(setq my-packages '(el-get monokai-theme markdown-mode magit ergoemacs-mode undo-tree unicode-fonts spaceline info+ linkd yaml-mode geiser matrix-client))
+(setq my-packages '(el-get monokai-theme markdown-mode magit ergoemacs-mode undo-tree unicode-fonts spaceline info+ linkd yaml-mode geiser matrix-client org-mode))
 (setq el-get-packages
       (append my-packages
               (mapcar #'el-get-source-name el-get-sources)))
@@ -30,5 +30,3 @@
 (global-undo-tree-mode 1)
 (setq custom-file "~/.emacs.d/configuration/init-customize.el")
 (load custom-file)
-(require 'guix-init nil t)
-(global-guix-prettify-mode)
