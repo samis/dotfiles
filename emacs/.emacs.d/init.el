@@ -15,7 +15,8 @@
     (eval-print-last-sexp)))
 
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-(setq my-packages '(el-get monokai-theme markdown-mode magit ergoemacs-mode undo-tree unicode-fonts spaceline info+ linkd yaml-mode geiser matrix-client org-mode))
+(setq sr-speedbar-right-side nil)
+(setq my-packages '(el-get monokai-theme markdown-mode magit ergoemacs-mode undo-tree unicode-fonts spaceline info+ linkd yaml-mode geiser matrix-client org-mode sr-speedbar csv-mode))
 (setq el-get-packages
       (append my-packages
               (mapcar #'el-get-source-name el-get-sources)))
