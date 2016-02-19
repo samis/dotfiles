@@ -25,9 +25,7 @@ ssh/
 docker/
 keepassx/
 notes/
-public/
 mime/
 xchat/
 ohmyzsh/
 !ohmyzsh/.oh-my-zsh/custom
-emacs/.emacs.d/eurgoemacs-extras/
