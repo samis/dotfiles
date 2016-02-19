@@ -4,3 +4,4 @@
 (setq org-log-done t)
 (setq org-todo-keywords
       '((sequence "TODO" "INPROGRESS" "WAITING" "|" "DONE" "CANCELLED")))
+(setq org-agenda-files '("~/org"))
