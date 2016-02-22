@@ -2,6 +2,11 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
+(setq org-agenda-window-setup 'same-window)
 (setq org-todo-keywords
       '((sequence "TODO" "INPROGRESS" "WAITING" "|" "DONE" "CANCELLED")))
 (setq org-agenda-files '("~/org"))
+(defun startup-todolist ()
+  (org-todo-list t)
+  (switch-to-buffer "*Org Agenda*"))
+(add-hook 'window-setup-hook 'startup-todolist)
