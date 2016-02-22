@@ -32,3 +32,10 @@
 (global-undo-tree-mode 1)
 (setq custom-file "~/.emacs.d/configuration/init-customize.el")
 (load custom-file)
+(defun use-ohsnapu ()
+    (interactive)
+    (setq buffer-face-mode-face '(:family "Ohsnapu"))
+    (buffer-face-mode))
+
+(add-hook 'eshell-mode-hook 'use-ohsnapu)
+(add-hook 'term-mode-hook 'use-ohsnapu)
