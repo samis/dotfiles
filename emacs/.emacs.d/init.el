@@ -7,6 +7,7 @@
   (set-fontset-font t 'symbol (font-spec :family "Symbola") frame ))
 (set-emoji-font nil)
 (add-hook 'after-make-frame-functions 'set-emoji-font)
+(setq inhibit-startup-screen t)
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
@@ -16,7 +17,7 @@
 
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
 (setq sr-speedbar-right-side nil)
-(setq my-packages '(el-get monokai-theme markdown-mode magit ergoemacs-mode undo-tree unicode-fonts spaceline info+ linkd yaml-mode geiser matrix-client org-mode sr-speedbar csv-mode))
+(setq my-packages '(el-get monokai-theme markdown-mode magit ergoemacs-mode undo-tree unicode-fonts spaceline info+ linkd yaml-mode geiser matrix-client sr-speedbar org-mode csv-mode))
 (setq el-get-packages
       (append my-packages
               (mapcar #'el-get-source-name el-get-sources)))
