@@ -1,3 +1,6 @@
+(setq sr-speedbar-width 40)
+(setq sr-speedbar-default-width 40)
+(setq sr-speedbar-max-width 40)
 (require 'sr-speedbar)
 (defun ad-advised-definition-p (definition)
   "Return non-nil if DEFINITION was generated from advice information."
