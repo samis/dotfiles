@@ -17,7 +17,7 @@
 
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
 (setq sr-speedbar-right-side nil)
-(setq my-packages '(el-get monokai-theme markdown-mode magit ergoemacs-mode undo-tree unicode-fonts spaceline info+ linkd yaml-mode geiser matrix-client sr-speedbar org-mode csv-mode))
+(setq my-packages '(el-get monokai-theme markdown-mode magit ergoemacs-mode undo-tree unicode-fonts spaceline info+ linkd yaml-mode geiser matrix-client sr-speedbar org-mode csv-mode better-defaults))
 (setq el-get-packages
       (append my-packages
               (mapcar #'el-get-source-name el-get-sources)))
@@ -39,3 +39,4 @@
 
 (add-hook 'eshell-mode-hook 'use-ohsnapu)
 (add-hook 'term-mode-hook 'use-ohsnapu)
+(require 'better-defaults)
