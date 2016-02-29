@@ -6,7 +6,13 @@
 (setq org-todo-keywords
       '((sequence "TODO" "INPROGRESS" "WAITING" "|" "DONE" "CANCELLED")))
 (setq org-agenda-files '("~/org"))
+(setq org-agenda-prefix-format
+      '((agenda . " %i %-12:c%?-12t% s")
+        (timeline . "  % s")
+        (todo . " %i %-6:c%l")
+        (tags . " %i %-12:c")
+        (search . " %i %-12:c")))
 (defun startup-todolist ()
   (org-todo-list t)
-  (switch-to-buffer "*Org Agenda*"))
+ )
 (add-hook 'window-setup-hook 'startup-todolist)
