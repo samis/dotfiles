@@ -40,3 +40,6 @@
 (add-hook 'eshell-mode-hook 'use-ohsnapu)
 (add-hook 'term-mode-hook 'use-ohsnapu)
 (require 'better-defaults)
+(require 'server)
+(unless (server-running-p)
+  (server-start)) 
