@@ -16,3 +16,11 @@
   (org-todo-list t)
  )
 (add-hook 'window-setup-hook 'startup-todolist)
+(setq org-capture-templates
+      '(("t" "TODO Entry" entry (file+headline "~/org/todo.org" "Tasks")
+         "* TODO %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree "~/org/journal.org")
+         "* %?\nEntered on %U\n  %i\n  %a")
+        ("w" "Web Link" entry (file+olp "~/org/links.org" "Links")
+         "* %c :website:\n%U %?%:initial")))
+(require 'org-protocol)
