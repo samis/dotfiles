@@ -43,3 +43,4 @@
 (require 'server)
 (unless (server-running-p)
   (server-start)) 
+(global-visual-line-mode)
