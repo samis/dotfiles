@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=netcut
+Exec=env WINEPREFIX="/home/samis/.wine" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/samis/.wine/dosdevices/c:/users/Public/Start\\ Menu/Programs/arcai.com/netcut.lnk
+Type=Application
+StartupNotify=true
+Path=/home/samis/.wine/dosdevices/c:/Program Files (x86)/netcut
+Icon=633F_netcut.0

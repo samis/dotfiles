@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Origin Error Reporter
+Exec=env WINEPREFIX="/home/samis/.wine" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/samis/.wine/dosdevices/c:/users/Public/Start\\ Menu/Programs/Origin/Origin\\ Error\\ Reporter.lnk
+Type=Application
+StartupNotify=true
+Path=/home/samis/.wine/dosdevices/c:/Program Files (x86)/Origin
+Icon=57EA_OriginER.0

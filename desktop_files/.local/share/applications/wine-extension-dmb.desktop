@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Dream Seeker
+MimeType=application/x-wine-extension-dmb;
+Exec=env WINEPREFIX="/home/samis/.wine32_ss13" wine start /ProgIDOpen BYOND.dmb_file %f
+NoDisplay=true
+StartupNotify=true
+Icon=3E00_dreamseeker.0

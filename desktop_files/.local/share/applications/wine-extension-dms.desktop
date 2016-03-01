@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=BYOND
+MimeType=text/vnd.dmclientscript;
+Exec=env WINEPREFIX="/home/samis/.wine32_ss13" wine start /ProgIDOpen BYOND.dms_file %f
+NoDisplay=true
+StartupNotify=true
+Icon=C939_byond.0
