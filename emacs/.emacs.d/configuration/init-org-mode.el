@@ -30,3 +30,4 @@
 (require 'org-protocol)
 (setq org-startup-folded nil)
 (setq org-completion-use-ido t)
+(setq org-startup-indented t)
