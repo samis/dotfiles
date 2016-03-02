@@ -1,10 +1,13 @@
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done t)
+(setq org-log-done 'time)
+(setq org-log-into-drawer t)
 (setq org-agenda-window-setup 'same-window)
+(setq org-use-fast-todo-selection t)
 (setq org-todo-keywords
-      '((sequence "TODO" "INPROGRESS" "WAITING" "|" "DONE" "CANCELLED")))
+      '((sequence "TODO(t)" "INPROGRESS(i)" "WAITING(w@/!)"
+                        "|" "DONE(d!/!)" "CANCELLED(c@/!)")))
 (setq org-agenda-files '("~/org"))
 (setq org-agenda-prefix-format
       '((agenda . " %i %-12:c%?-12t% s")
@@ -24,3 +27,5 @@
         ("w" "Web Link" entry (file+olp "~/org/links.org" "Links")
          "* %c :website:\n%U %?%:initial")))
 (require 'org-protocol)
+(setq org-startup-folded nil)
+(setq org-completion-use-ido t)
