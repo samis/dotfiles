@@ -1,0 +1,5 @@
+(require 'diminish)
+(diminish 'visual-line-mode)
+(diminish 'undo-tree-mode)
+(diminish 'org-indent-mode)
+(diminish 'auto-revert-mode)
