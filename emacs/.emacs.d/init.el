@@ -13,13 +13,8 @@
         (unless (member library libraries-loaded)
           (load library nil t)
           (push library libraries-loaded))))))
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp)))
 (my-load-all-in-directory "~/.emacs.d/lisp/")
+(ensure-el-get-is-present)
 (set-emoji-font nil)
 (add-hook 'after-make-frame-functions 'set-emoji-font)
 
@@ -38,10 +33,6 @@
 (cua-mode 1)
 (setq custom-file "~/.emacs.d/configuration/init-customize.el")
 (load custom-file)
-(defun use-ohsnapu ()
-    (interactive)
-    (setq buffer-face-mode-face '(:family "Ohsnapu"))
-    (buffer-face-mode))
 (add-hook 'eshell-mode-hook 'use-ohsnapu)
 (add-hook 'term-mode-hook 'use-ohsnapu)
 (require 'server)
