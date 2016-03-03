@@ -39,4 +39,5 @@
 (unless (server-running-p)
   (server-start))
 (global-visual-line-mode)
+(global-auto-revert-mode)
 (setq ido-use-filename-at-point 'guess)
