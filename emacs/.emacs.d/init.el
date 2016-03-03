@@ -16,13 +16,12 @@
     (eval-print-last-sexp)))
 
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-(setq my-packages '(el-get monokai-theme markdown-mode magit ergoemacs-mode undo-tree unicode-fonts spaceline info+ linkd yaml-mode geiser matrix-client sr-speedbar org-mode csv-mode better-defaults pos-tip company-mode company-quickhelp smex ido-ubiquitous diminish))
+(setq my-packages '(el-get monokai-theme markdown-mode magit undo-tree unicode-fonts spaceline info+ linkd yaml-mode geiser matrix-client sr-speedbar org-mode csv-mode better-defaults pos-tip company-mode company-quickhelp smex ido-ubiquitous diminish))
 (setq el-get-packages
       (append my-packages
               (mapcar #'el-get-source-name el-get-sources)))
 (el-get 'sync el-get-packages)
 (setq vc-follow-symlinks t)
-(tool-bar-mode -1)
 (global-linum-mode t)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
@@ -34,10 +33,8 @@
     (interactive)
     (setq buffer-face-mode-face '(:family "Ohsnapu"))
     (buffer-face-mode))
-
 (add-hook 'eshell-mode-hook 'use-ohsnapu)
 (add-hook 'term-mode-hook 'use-ohsnapu)
-(require 'better-defaults)
 (require 'server)
 (unless (server-running-p)
   (server-start))
