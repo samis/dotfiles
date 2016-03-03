@@ -2,11 +2,6 @@
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
 (setq el-get-user-package-directory "~/.emacs.d/configuration")
 (set-face-attribute 'default nil :family "Input Mono Compressed" :height 98)
-(defun set-emoji-font (frame)
-"Adjust the font settings of FRAME so Emacs can display emoji properly."
-  (set-fontset-font t 'symbol (font-spec :family "Symbola") frame ))
-(set-emoji-font nil)
-(add-hook 'after-make-frame-functions 'set-emoji-font)
 (setq inhibit-startup-screen t)
 (defun my-load-all-in-directory (dir)
   "`load' all elisp libraries in directory DIR which are not already loaded."
@@ -24,8 +19,12 @@
        "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
     (goto-char (point-max))
     (eval-print-last-sexp)))
+(my-load-all-in-directory "~/.emacs.d/lisp/")
+(set-emoji-font nil)
+(add-hook 'after-make-frame-functions 'set-emoji-font)
 
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+(global-auto-revert-mode)
 (setq my-packages '(el-get monokai-theme markdown-mode magit undo-tree unicode-fonts spaceline info+ linkd yaml-mode geiser matrix-client sr-speedbar org-mode csv-mode better-defaults pos-tip company-mode company-quickhelp smex ido-ubiquitous diminish))
 (setq el-get-packages
       (append my-packages
@@ -49,5 +48,4 @@
 (unless (server-running-p)
   (server-start))
 (global-visual-line-mode)
-(global-auto-revert-mode)
 (setq ido-use-filename-at-point 'guess)
