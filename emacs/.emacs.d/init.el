@@ -16,7 +16,6 @@
     (eval-print-last-sexp)))
 
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-(setq sr-speedbar-right-side nil)
 (setq my-packages '(el-get monokai-theme markdown-mode magit ergoemacs-mode undo-tree unicode-fonts spaceline info+ linkd yaml-mode geiser matrix-client sr-speedbar org-mode csv-mode better-defaults pos-tip company-mode company-quickhelp smex ido-ubiquitous diminish))
 (setq el-get-packages
       (append my-packages
@@ -29,7 +28,6 @@
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
 (cua-mode 1)
-(global-undo-tree-mode 1)
 (setq custom-file "~/.emacs.d/configuration/init-customize.el")
 (load custom-file)
 (defun use-ohsnapu ()
@@ -42,6 +40,6 @@
 (require 'better-defaults)
 (require 'server)
 (unless (server-running-p)
-  (server-start)) 
+  (server-start))
 (global-visual-line-mode)
 (setq ido-use-filename-at-point 'guess)

@@ -2,6 +2,7 @@
 (setq sr-speedbar-default-width 40)
 (setq sr-speedbar-max-width 40)
 (setq sr-speedbar-skip-other-window-p t)
+(setq sr-speedbar-right-side nil)
 (require 'sr-speedbar)
 (defun ad-advised-definition-p (definition)
   "Return non-nil if DEFINITION was generated from advice information."
