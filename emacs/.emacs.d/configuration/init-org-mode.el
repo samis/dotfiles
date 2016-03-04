@@ -31,3 +31,10 @@
 (setq org-startup-folded nil)
 (setq org-completion-use-ido t)
 (setq org-startup-indented t)
+(setq org-refile-targets (quote ((nil :maxlevel . 9)
+                                 (org-agenda-files :maxlevel . 9))))
+; Use full outline paths for refile targets - we file directly with IDO
+(setq org-refile-use-outline-path t)
+
+; Targets complete directly with IDO
+(setq org-outline-path-complete-in-steps t)
