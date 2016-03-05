@@ -5,5 +5,3 @@
 (setq inhibit-startup-screen t)
 (setq vc-follow-symlinks t)
 (ensure-server-is-running)
-(setq ido-use-filename-at-point 'guess)
-(setq ido-use-virtual-buffers t)
