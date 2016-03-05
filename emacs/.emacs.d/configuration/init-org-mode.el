@@ -38,3 +38,5 @@
 
 ; Targets complete directly with IDO
 (setq org-outline-path-complete-in-steps t)
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
