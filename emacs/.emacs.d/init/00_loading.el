@@ -1,3 +1,4 @@
+(add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
 (defun my-load-all-in-directory (dir)
