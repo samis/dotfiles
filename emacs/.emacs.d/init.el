@@ -1,5 +1,8 @@
+(add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
+(require 'init-loader)
+(init-loader-load "~/.emacs.d/init")
 (setq el-get-user-package-directory "~/.emacs.d/configuration")
 (set-face-attribute 'default nil :family "Input Mono Compressed" :height 98)
 (setq inhibit-startup-screen t)
