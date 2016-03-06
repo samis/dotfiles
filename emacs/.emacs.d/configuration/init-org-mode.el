@@ -18,7 +18,7 @@
 (defun startup-todolist ()
   (org-todo-list t)
   (switch-to-buffer "*Org Agenda*")
-  (switch-to-buffer-other-window "~/org/index.org")
+  (switch-to-buffer-other-window "index.org")
  )
 (add-hook 'window-setup-hook 'startup-todolist)
 (setq org-capture-templates
