@@ -1,3 +1,5 @@
 (setq inhibit-startup-screen t)
 (setq vc-follow-symlinks t)
 (ensure-server-is-running)
+(setq tab-always-indent 'complete)
+(global-set-key (kbd "C-x f") 'ido-find-file) 
