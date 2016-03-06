@@ -12,3 +12,4 @@
           (load library nil t)
           (push library libraries-loaded))))))
 (my-load-all-in-directory "~/.emacs.d/lisp/")
+(setq init-loader-show-log-after-init nil)
