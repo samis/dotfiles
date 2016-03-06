@@ -17,6 +17,8 @@
         (search . " %i %-12:c")))
 (defun startup-todolist ()
   (org-todo-list t)
+  (switch-to-buffer "*Org Agenda*")
+  (switch-to-buffer-other-window "~/org/index.org")
  )
 (add-hook 'window-setup-hook 'startup-todolist)
 (setq org-capture-templates
@@ -103,3 +105,4 @@ Switch projects and subprojects from NEXT back to TODO"
             (setq has-subtask t))))
       (and is-a-task (not has-subtask)))))
 (setq org-clock-in-switch-to-state 'bh/clock-in-to-next)
+(setq initial-buffer-choice "~/org/index.org")
