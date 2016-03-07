@@ -21,5 +21,8 @@
                     smex
                     ido-ubiquitous
                     aggressive-indent-mode
-                    diminish))
+                    diminish
+                    let-alist
+                    imenu-list
+                    window-purpose))
 (init-loader-load "~/.emacs.d/init")
