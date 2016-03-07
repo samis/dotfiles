@@ -106,3 +106,4 @@ Switch projects and subprojects from NEXT back to TODO"
       (and is-a-task (not has-subtask)))))
 (setq org-clock-in-switch-to-state 'bh/clock-in-to-next)
 (setq initial-buffer-choice "~/org/index.org")
+(setq org-return-follows-link t)
