@@ -3,3 +3,6 @@
 (ensure-server-is-running)
 (setq tab-always-indent 'complete)
 (global-set-key (kbd "C-x f") 'ido-find-file) 
+(setq scroll-step 1)
+(setq scroll-conservatively 10000)
+(setq auto-window-vscroll nil)
