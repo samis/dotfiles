@@ -3,4 +3,5 @@
 (purpose-x-magit-single-on)
 (add-to-list 'purpose-user-mode-purposes '(org-mode . org))
 (add-to-list 'purpose-user-mode-purposes '(org-agenda-mode . org))
+(add-to-list 'purpose-user-mode-purposes '(speedbar-mode . sidebar))
 (purpose-compile-user-configuration)
