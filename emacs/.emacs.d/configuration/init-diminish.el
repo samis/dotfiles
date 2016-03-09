@@ -8,5 +8,7 @@
   (setq minor-mode-alist
         (delete '(server-buffer-clients " Server") minor-mode-alist)))
 
-(eval-after-load "server"
-  (diminish 'server-mode))
+(with-eval-after-load 'with-editor-mode
+  (diminish 'with-editor-mode))
+(with-eval-after-load 'abbrev
+  (diminish 'abbrev-mode))
