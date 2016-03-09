@@ -5,3 +5,6 @@
 (add-to-list 'purpose-user-mode-purposes '(org-agenda-mode . org))
 (add-to-list 'purpose-user-mode-purposes '(speedbar-mode . sidebar))
 (purpose-compile-user-configuration)
+(defun my/load-coding-layout-on-start ()
+  (purpose-load-window-layout "coding"))
+(add-hook 'after-init-hook 'my/load-coding-layout-on-start)

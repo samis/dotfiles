@@ -20,7 +20,7 @@
   (switch-to-buffer "*Org Agenda*")
   (switch-to-buffer-other-window "index.org")
  )
-(add-hook 'window-setup-hook 'startup-todolist)
+(add-hook 'after-init-hook 'startup-todolist)
 (setq org-capture-templates
       '(("t" "TODO Entry" entry (file+headline "~/org/todo.org" "Tasks")
          "* TODO %?\n  %i\n  %a")

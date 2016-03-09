@@ -11,18 +11,16 @@
                     linkd
                     yaml-mode
                     geiser
-                    matrix-client
+                    matrix-client 
+                    window-purpose
                     sr-speedbar
                     org-mode
-                    csv-mode
-                    pos-tip
+                    csv-mode 
                     company-mode
-                    company-quickhelp
                     smex
                     ido-ubiquitous
                     aggressive-indent-mode
                     diminish
                     let-alist
-                    imenu-list
-                    window-purpose))
+                    imenu-list))
 (init-loader-load "~/.emacs.d/init")

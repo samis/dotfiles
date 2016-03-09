@@ -12,4 +12,4 @@
       (let ((docstring (ad-docstring definition)))
         (and (stringp docstring)
              (get-text-property 0 'dynamic-docstring-function docstring)))))
-;(add-hook 'after-init-hook 'sr-speedbar-open)
+(add-hook 'after-init-hook 'sr-speedbar-open)
