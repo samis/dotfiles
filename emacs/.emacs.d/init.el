@@ -19,8 +19,9 @@
                     company-mode
                     smex
                     ido-ubiquitous
+                    flx-ido
                     aggressive-indent-mode
                     diminish
                     let-alist
                     imenu-list))
-(init-loader-load "~/.emacs.d/init")
+(init-loader-load "~/.emacs.d/init/")
