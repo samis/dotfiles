@@ -1,5 +1,0 @@
-(set-face-attribute 'default nil :family "Input Mono Compressed" :height 98)
-(set-emoji-font nil)
-(add-hook 'after-make-frame-functions 'set-emoji-font)
-(add-hook 'eshell-mode-hook 'use-ohsnapu)
-(add-hook 'term-mode-hook 'use-ohsnapu)

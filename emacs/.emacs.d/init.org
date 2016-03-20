@@ -22,6 +22,26 @@
           (push library libraries-loaded))))))
 (my-load-all-in-directory "~/.emacs.d/lisp/")
 #+END_SRC
+
+** Set the correct font settings for use elsewhere in Emacs.
+#+BEGIN_SRC emacs-lisp
+(set-face-attribute 'default nil :family "Input Mono Compressed" :height 98)
+(set-emoji-font nil)
+(add-hook 'after-make-frame-functions 'set-emoji-font)
+(add-hook 'eshell-mode-hook 'use-ohsnapu)
+(add-hook 'term-mode-hook 'use-ohsnapu)
+#+END_SRC
+
+** Configure built-in global minor modes
+#+BEGIN_SRC emacs-lisp
+(global-auto-revert-mode)
+(global-linum-mode t)
+(cua-mode 1)
+(global-visual-line-mode)
+(winner-mode 1)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+(add-hook 'text-mode-hook 'flyspell-mode)
+#+END_SRC
 ** Load the rest of my init code.
 #+BEGIN_SRC emacs-lisp
 (setq init-loader-show-log-after-init nil)

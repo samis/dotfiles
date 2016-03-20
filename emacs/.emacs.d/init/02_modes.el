@@ -1,7 +1,0 @@
-(global-auto-revert-mode)
-(global-linum-mode t)
-(cua-mode 1)
-(global-visual-line-mode)
-(winner-mode 1)
-(add-hook 'prog-mode-hook 'flyspell-prog-mode)
-(add-hook 'text-mode-hook 'flyspell-mode)
