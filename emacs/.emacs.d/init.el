@@ -22,32 +22,3 @@
      ;; Finish on the next level-1 header
      ((looking-at "^\\* ")
       (goto-char (point-max))))))
-(load-file "~/.emacs.d/lisp/init-loader.el")
-(setq my-packages '(el-get
-                    better-defaults
-                    monokai-theme
-                    markdown-mode
-                    magit
-                    undo-tree
-                    unicode-fonts
-                    spaceline
-                    info+
-                    linkd
-                    yaml-mode
-                    geiser
-                    matrix-client 
-                    window-purpose
-                    sr-speedbar
-                    org-mode
-                    csv-mode 
-                    company-mode
-                    smex
-                    ido-ubiquitous
-                    flx-ido
-                    aggressive-indent-mode
-                    diminish
-                    let-alist
-                    imenu-list
-                    projectile
-                    which-key))
-(init-loader-load "~/.emacs.d/init/")
