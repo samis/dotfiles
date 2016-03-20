@@ -1,4 +1,4 @@
 (setq projectile-indexing-method 'git)
 (setq projectile-enable-caching t)
-(setq projectile-keymap-prefix (kbd "C-c C-p"))
+(setq projectile-keymap-prefix (kbd "<menu> p"))
 (projectile-global-mode t)
