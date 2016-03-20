@@ -24,5 +24,6 @@
                     diminish
                     let-alist
                     imenu-list
-                    projectile))
+                    projectile
+                    which-key))
 (init-loader-load "~/.emacs.d/init/")
