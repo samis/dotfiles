@@ -23,5 +23,6 @@
                     aggressive-indent-mode
                     diminish
                     let-alist
-                    imenu-list))
+                    imenu-list
+                    projectile))
 (init-loader-load "~/.emacs.d/init/")
