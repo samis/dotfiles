@@ -48,6 +48,19 @@
 (setq ido-use-filename-at-point 'guess)
 (setq ido-use-virtual-buffers t)
 #+END_SRC
+
+** Add misc settings that don't really fit anywhere else
+#+BEGIN_SRC emacs-lisp
+(setq inhibit-startup-screen t)
+(setq vc-follow-symlinks t)
+(ensure-server-is-running)
+(setq tab-always-indent 'complete)
+(global-set-key (kbd "C-x f") 'ido-find-file)
+(global-unset-key (kbd "<menu>"))
+(setq scroll-step 1)
+(setq scroll-conservatively 10000)
+(setq auto-window-vscroll nil)
+#+END_SRC
 ** Load the rest of my init code.
 #+BEGIN_SRC emacs-lisp
 (setq init-loader-show-log-after-init nil)
