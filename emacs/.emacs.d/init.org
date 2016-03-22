@@ -8,6 +8,36 @@
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
 #+END_SRC
 
+** Set the list of packages to be loaded
+#+BEGIN_SRC emacs-lisp
+(setq my-packages '(el-get
+                    better-defaults
+                    monokai-theme
+                    markdown-mode
+                    magit
+                    undo-tree
+                    unicode-fonts
+                    spaceline
+                    info+
+                    linkd
+                    yaml-mode
+                    geiser
+                    matrix-client 
+                    window-purpose
+                    sr-speedbar
+                    org-mode
+                    csv-mode 
+                    company-mode
+                    smex
+                    ido-ubiquitous
+                    flx-ido
+                    aggressive-indent-mode
+                    diminish
+                    let-alist
+                    imenu-list
+                    projectile
+                    which-key))
+#+END_SRC
 ** Load all of my random lisp libraries.
 #+BEGIN_SRC emacs-lisp
 (defun my-load-all-in-directory (dir)
@@ -123,35 +153,8 @@ abort completely with `C-g'."
 (setq save-abbrevs 'silently)
 (setq-default abbrev-mode t)
 #+END_SRC emacs-lisp
-** Load the rest of my init code.
+** Run el-get and load the Custom settings.
 #+BEGIN_SRC emacs-lisp
-(setq init-loader-show-log-after-init nil)
-(setq my-packages '(el-get
-                    better-defaults
-                    monokai-theme
-                    markdown-mode
-                    magit
-                    undo-tree
-                    unicode-fonts
-                    spaceline
-                    info+
-                    linkd
-                    yaml-mode
-                    geiser
-                    matrix-client 
-                    window-purpose
-                    sr-speedbar
-                    org-mode
-                    csv-mode 
-                    company-mode
-                    smex
-                    ido-ubiquitous
-                    flx-ido
-                    aggressive-indent-mode
-                    diminish
-                    let-alist
-                    imenu-list
-                    projectile
-                    which-key))
-(init-loader-load "~/.emacs.d/init/")
+(el-get 'sync my-packages)
+(load-file "~/.emacs.d/customize.el")
 #+END_SRC
