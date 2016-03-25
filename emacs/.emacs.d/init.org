@@ -165,6 +165,7 @@ abort completely with `C-g'."
 *** which-key
 #+BEGIN_SRC emacs-lisp
   (req-package which-key
+    :diminish which-key-mode
     :config
     (which-key-mode t)
     (which-key-setup-side-window-bottom)
