@@ -55,7 +55,7 @@
 
 ** Set the correct font settings for use elsewhere in Emacs.
 #+BEGIN_SRC emacs-lisp
-(set-face-attribute 'default nil :family "Input Mono Compressed" :height 98)
+(set-face-attribute 'default nil :family "PragmataPro" :height 98)
 (set-emoji-font nil)
 (add-hook 'after-make-frame-functions 'set-emoji-font)
 (add-hook 'eshell-mode-hook 'use-ohsnapu)
