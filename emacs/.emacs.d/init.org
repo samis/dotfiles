@@ -36,8 +36,7 @@
                       diminish
                       let-alist
                       imenu-list
-                      projectile
-                      which-key))
+                      projectile))
 #+END_SRC
 ** Load all of my random lisp libraries.
 #+BEGIN_SRC emacs-lisp
@@ -157,8 +156,24 @@ abort completely with `C-g'."
 ** Run el-get
 #+BEGIN_SRC emacs-lisp
   (el-get 'sync my-packages)
+  (package-initialize)
 #+END_SRC
 ** Package Configuration
+#+BEGIN_SRC emacs-lisp
+(require 'req-package)
+#+END_SRC
+*** which-key
+#+BEGIN_SRC emacs-lisp
+  (req-package which-key
+    :config
+    (which-key-mode t)
+    (which-key-setup-side-window-bottom)
+    :ensure t)
+#+END_SRC
+** Finish loading packages
+#+BEGIN_SRC emacs-lisp
+(req-package-finish)
+#+END_SRC
 ** Load Custom settings
 #+BEGIN_SRC emacs-lisp
 (load-file "~/.emacs.d/customize.el")
