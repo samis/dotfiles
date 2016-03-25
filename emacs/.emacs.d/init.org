@@ -3,119 +3,120 @@
 
 ** Correctly set the load-path
 #+BEGIN_SRC emacs-lisp
-(add-to-list 'load-path "~/.emacs.d/lisp")
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-(add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
+  (add-to-list 'load-path "~/.emacs.d/lisp")
+  (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+  (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
 #+END_SRC
 
 ** Set the list of packages to be loaded
 #+BEGIN_SRC emacs-lisp
-(setq my-packages '(el-get
-                    better-defaults
-                    monokai-theme
-                    markdown-mode
-                    magit
-                    undo-tree
-                    unicode-fonts
-                    spaceline
-                    info+
-                    linkd
-                    yaml-mode
-                    geiser
-                    matrix-client 
-                    window-purpose
-                    sr-speedbar
-                    org-mode
-                    csv-mode 
-                    company-mode
-                    smex
-                    ido-ubiquitous
-                    flx-ido
-                    aggressive-indent-mode
-                    diminish
-                    let-alist
-                    imenu-list
-                    projectile
-                    which-key))
+  (setq my-packages '(el-get
+                      better-defaults
+                      req-package
+                      monokai-theme
+                      markdown-mode
+                      magit
+                      undo-tree
+                      unicode-fonts
+                      spaceline
+                      info+
+                      linkd
+                      yaml-mode
+                      geiser
+                      matrix-client 
+                      window-purpose
+                      sr-speedbar
+                      org-mode
+                      csv-mode 
+                      company-mode
+                      smex
+                      ido-ubiquitous
+                      flx-ido
+                      aggressive-indent-mode
+                      diminish
+                      let-alist
+                      imenu-list
+                      projectile
+                      which-key))
 #+END_SRC
 ** Load all of my random lisp libraries.
 #+BEGIN_SRC emacs-lisp
-(defun my-load-all-in-directory (dir)
-  "`load' all elisp libraries in directory DIR which are not already loaded."
-  (interactive "D")
-  (let ((libraries-loaded (mapcar #'file-name-sans-extension
-                                  (delq nil (mapcar #'car load-history)))))
-    (dolist (file (directory-files dir t ".+\\.elc?$"))
-      (let ((library (file-name-sans-extension file)))
-        (unless (member library libraries-loaded)
-          (load library nil t)
-          (push library libraries-loaded))))))
-(my-load-all-in-directory "~/.emacs.d/lisp/")
+  (defun my-load-all-in-directory (dir)
+    "`load' all elisp libraries in directory DIR which are not already loaded."
+    (interactive "D")
+    (let ((libraries-loaded (mapcar #'file-name-sans-extension
+                                    (delq nil (mapcar #'car load-history)))))
+      (dolist (file (directory-files dir t ".+\\.elc?$"))
+        (let ((library (file-name-sans-extension file)))
+          (unless (member library libraries-loaded)
+            (load library nil t)
+            (push library libraries-loaded))))))
+  (my-load-all-in-directory "~/.emacs.d/lisp/")
 #+END_SRC
 
 ** Set the correct font settings for use elsewhere in Emacs.
 #+BEGIN_SRC emacs-lisp
-(set-face-attribute 'default nil :family "PragmataPro" :height 98)
-(set-emoji-font nil)
-(add-hook 'after-make-frame-functions 'set-emoji-font)
-(add-hook 'eshell-mode-hook 'use-ohsnapu)
-(add-hook 'term-mode-hook 'use-ohsnapu)
+  (set-face-attribute 'default nil :family "PragmataPro" :height 98)
+  (set-emoji-font nil)
+  (add-hook 'after-make-frame-functions 'set-emoji-font)
+  (add-hook 'eshell-mode-hook 'use-ohsnapu)
+  (add-hook 'term-mode-hook 'use-ohsnapu)
 #+END_SRC
 
 ** Configure built-in global minor modes
 #+BEGIN_SRC emacs-lisp
-(global-auto-revert-mode)
-(global-linum-mode t)
-(cua-mode 1)
-(global-visual-line-mode)
-(winner-mode 1)
-(add-hook 'prog-mode-hook 'flyspell-prog-mode)
-(add-hook 'text-mode-hook 'flyspell-mode)
+  (global-auto-revert-mode)
+  (global-linum-mode t)
+  (cua-mode 1)
+  (global-visual-line-mode)
+  (winner-mode 1)
+  (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+  (add-hook 'text-mode-hook 'flyspell-mode)
 #+END_SRC
 
 ** Tweak some IDO settings
 #+BEGIN_SRC emacs-lisp
-(setq ido-use-filename-at-point 'guess)
-(setq ido-use-virtual-buffers t)
+  (setq ido-use-filename-at-point 'guess)
+  (setq ido-use-virtual-buffers t)
 #+END_SRC
 
 ** Add misc settings that don't really fit anywhere else
 #+BEGIN_SRC emacs-lisp
-(setq inhibit-startup-screen t)
-(setq vc-follow-symlinks t)
-(ensure-server-is-running)
-(setq tab-always-indent 'complete)
-(global-set-key (kbd "C-x f") 'ido-find-file)
-(global-unset-key (kbd "<menu>"))
-(setq scroll-step 1)
-(setq scroll-conservatively 10000)
-(setq auto-window-vscroll nil)
+  (setq inhibit-startup-screen t)
+  (setq vc-follow-symlinks t)
+  (ensure-server-is-running)
+  (setq tab-always-indent 'complete)
+  (global-set-key (kbd "C-x f") 'ido-find-file)
+  (global-unset-key (kbd "<menu>"))
+  (setq scroll-step 1)
+  (setq scroll-conservatively 10000)
+  (setq auto-window-vscroll nil)
 #+END_SRC
 
 ** Set ELPA package archives
 #+BEGIN_SRC emacs-lisp
-(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                         ("marmalade" . "https://marmalade-repo.org/packages/")
-                         ("melpa" . "https://melpa.org/packages/")))
+  (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                           ("marmalade" . "https://marmalade-repo.org/packages/")
+                           ("melpa" . "https://melpa.org/packages/")))
 #+END_SRC
 
 ** Prepare el-get
 #+BEGIN_SRC emacs-lisp
-(setq el-get-user-package-directory "~/.emacs.d/configuration")
-(ensure-el-get-is-present)
-(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-(setq el-get-packages
-      (append my-packages
-              (mapcar #'el-get-source-name el-get-sources)))
+  (setq el-get-user-package-directory "~/.emacs.d/configuration")
+  (ensure-el-get-is-present)
+  (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+  (setq el-get-packages
+        (append my-packages
+                (mapcar #'el-get-source-name el-get-sources)))
 #+END_SRC
 
 ** Initialise abbrev-based auto-correction
 #+BEGIN_SRC emacs-lisp
 (define-key ctl-x-map "\C-i"
-  #'endless/ispell-word-then-abbrev)
+#'endless/ispell-word-then-abbrev)
 
 (defun endless/simple-get-word ()
-  (car-safe (save-excursion (ispell-get-word nil))))
+(car-safe (save-excursion (ispell-get-word nil))))
 
 (defun endless/ispell-word-then-abbrev (p)
   "Call `ispell-word', then create an abbrev for it.
@@ -140,21 +141,25 @@ abort completely with `C-g'."
         (backward-word)
         (backward-char))
       (setq aft (endless/simple-get-word)))
-    (if (and aft bef (not (equal aft bef)))
+      (if (and aft bef (not (equal aft bef)))
         (let ((aft (downcase aft))
-              (bef (downcase bef)))
-          (define-abbrev
-            (if p local-abbrev-table global-abbrev-table)
-            bef aft)
-          (message "\"%s\" now expands to \"%s\" %sally"
-                   bef aft (if p "loc" "glob")))
-      (user-error "No typo at or before point"))))
+        (bef (downcase bef)))
+        (define-abbrev
+        (if p local-abbrev-table global-abbrev-table)
+        bef aft)
+        (message "\"%s\" now expands to \"%s\" %sally"
+        bef aft (if p "loc" "glob")))
+          (user-error "No typo at or before point"))))
 
 (setq save-abbrevs 'silently)
 (setq-default abbrev-mode t)
 #+END_SRC emacs-lisp
-** Run el-get and load the Custom settings.
+** Run el-get
 #+BEGIN_SRC emacs-lisp
-(el-get 'sync my-packages)
+  (el-get 'sync my-packages)
+#+END_SRC
+** Package Configuration
+** Load Custom settings
+#+BEGIN_SRC emacs-lisp
 (load-file "~/.emacs.d/customize.el")
 #+END_SRC

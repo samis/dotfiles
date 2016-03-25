@@ -18,6 +18,7 @@
      (disable exact "todo-add-category")
      (enable exact "find-tag")
      (enable prefix "etags-select-"))))
+ '(org-src-tab-acts-natively t)
  '(safe-local-variable-values
    (quote
     ((eval ignore-errors "Write-contents-functions is a buffer-local alternative to before-save-hook"
