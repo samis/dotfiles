@@ -15,7 +15,6 @@
                       req-package
                       monokai-theme
                       magit
-                      undo-tree
                       unicode-fonts
                       spaceline
                       info+
@@ -231,6 +230,14 @@ abort completely with `C-g'."
 *** markdown-mode
 #+BEGIN_SRC emacs-lisp
   (req-package markdown-mode
+    :ensure t)
+#+END_SRC
+*** undo-tree
+#+BEGIN_SRC emacs-lisp
+  (req-package undo-tree
+    :bind ("C-z" . undo-tree-undo)
+    :config
+    (global-undo-tree-mode 1)
     :ensure t)
 #+END_SRC
 ** Finish loading packages
