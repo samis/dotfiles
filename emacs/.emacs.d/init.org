@@ -30,7 +30,6 @@
                       csv-mode 
                       company-mode
                       smex
-                      ido-ubiquitous
                       diminish
                       let-alist
                       imenu-list))
@@ -183,6 +182,16 @@ abort completely with `C-g'."
   (req-package flx-ido
     :config
     (flx-ido-mode 1)
+    :ensure t)
+#+END_SRC
+*** ido-ubiquitous
+#+BEGIN_SRC emacs-lisp
+  (req-package ido-ubiquitous
+    :init
+    (setq ido-ubiquitous-auto-update-overrides t)
+    :config
+    (ido-everywhere 1)
+    (ido-ubiquitous-mode 1)
     :ensure t)
 #+END_SRC
 *** which-key
