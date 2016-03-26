@@ -27,8 +27,7 @@
                       window-purpose
                       sr-speedbar
                       org-mode
-                      csv-mode 
-                      company-mode
+                      csv-mode
                       diminish
                       let-alist
                       imenu-list))
@@ -201,6 +200,16 @@ abort completely with `C-g'."
     :bind ("C-c C-c M-x" . execute-extended-command)
     :config
     (smex-initialize)
+    :ensure t)
+#+END_SRC
+*** Company
+#+BEGIN_SRC emacs-lisp
+  (req-package company
+    :diminish company-mode
+    :init
+    (setq company-idle-delay 0.2)
+    :config
+    (add-hook 'after-init-hook 'global-company-mode)
     :ensure t)
 #+END_SRC
 *** which-key
