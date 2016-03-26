@@ -17,10 +17,7 @@
         (tags . " %i %-12:c")
         (search . " %i %-12:c")))
 (defun startup-todolist ()
-  (org-todo-list t)
-  (switch-to-buffer "*Org Agenda*")
-  (switch-to-buffer-other-window "index.org")
- )
+  (switch-to-buffer-other-window "index.org"))
 (add-hook 'after-init-hook 'startup-todolist)
 (setq org-capture-templates
       '(("t" "TODO Entry" entry (file+headline "~/org/personal.org" "Tasks")
