@@ -32,7 +32,6 @@
                       smex
                       ido-ubiquitous
                       flx-ido
-                      aggressive-indent-mode
                       diminish
                       let-alist
                       imenu-list))
@@ -170,6 +169,14 @@ abort completely with `C-g'."
     (setq projectile-keymap-prefix (kbd "<menu> p"))
     :config
     (projectile-global-mode t)
+    :ensure t)
+#+END_SRC
+*** aggressive-indent-mode
+#+BEGIN_SRC emacs-lisp
+  (req-package aggressive-indent
+    :diminish aggressive-indent-mode
+    :config
+    (global-aggressive-indent-mode 1)
     :ensure t)
 #+END_SRC
 *** which-key
