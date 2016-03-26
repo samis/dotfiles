@@ -35,8 +35,7 @@
                       aggressive-indent-mode
                       diminish
                       let-alist
-                      imenu-list
-                      projectile))
+                      imenu-list))
 #+END_SRC
 ** Load all of my random lisp libraries.
 #+BEGIN_SRC emacs-lisp
@@ -161,6 +160,17 @@ abort completely with `C-g'."
 ** Package Configuration
 #+BEGIN_SRC emacs-lisp
 (require 'req-package)
+#+END_SRC
+*** Projectile
+#+BEGIN_SRC emacs-lisp
+  (req-package projectile
+    :init 
+    (setq projectile-indexing-method 'git)
+    (setq projectile-enable-caching t)
+    (setq projectile-keymap-prefix (kbd "<menu> p"))
+    :config
+    (projectile-global-mode t)
+    :ensure t)
 #+END_SRC
 *** which-key
 #+BEGIN_SRC emacs-lisp
