@@ -31,7 +31,6 @@
                       company-mode
                       smex
                       ido-ubiquitous
-                      flx-ido
                       diminish
                       let-alist
                       imenu-list))
@@ -177,6 +176,13 @@ abort completely with `C-g'."
     :diminish aggressive-indent-mode
     :config
     (global-aggressive-indent-mode 1)
+    :ensure t)
+#+END_SRC
+*** flx-ido
+#+BEGIN_SRC emacs-lisp
+  (req-package flx-ido
+    :config
+    (flx-ido-mode 1)
     :ensure t)
 #+END_SRC
 *** which-key
