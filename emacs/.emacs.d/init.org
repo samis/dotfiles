@@ -29,7 +29,6 @@
                       org-mode
                       csv-mode 
                       company-mode
-                      smex
                       diminish
                       let-alist
                       imenu-list))
@@ -192,6 +191,16 @@ abort completely with `C-g'."
     :config
     (ido-everywhere 1)
     (ido-ubiquitous-mode 1)
+    :ensure t)
+#+END_SRC
+*** Smex
+#+BEGIN_SRC emacs-lisp
+  (req-package smex
+    :bind ("M-x" . smex)
+    :bind ("M-X" . smex-major-mode-commands)
+    :bind ("C-c C-c M-x" . execute-extended-command)
+    :config
+    (smex-initialize)
     :ensure t)
 #+END_SRC
 *** which-key
