@@ -16,8 +16,7 @@
                       monokai-theme
                       unicode-fonts
                       spaceline
-                      info+
-                      geiser 
+                      info+ 
                       window-purpose
                       sr-speedbar
                       org-mode
@@ -243,6 +242,11 @@ abort completely with `C-g'."
 #+BEGIN_SRC emacs-lisp
   (req-package magit
     :bind ("C-x g" . magit-status)
+    :ensure t)
+#+END_SRC
+*** Geiser
+#+BEGIN_SRC emacs-lisp
+  (req-package geiser
     :ensure t)
 #+END_SRC
 ** Finish loading packages
