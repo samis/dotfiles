@@ -4,7 +4,7 @@
 (setq org-log-done 'time)
 (setq org-log-into-drawer t)
 (setq org-agenda-window-setup 'same-window)
-(setq org-src-window-setup 'other-window)
+(setq org-src-window-setup 'current-window)
  (setq org-use-fast-todo-selection t)
 (setq org-todo-keywords
       '((sequence "TODO(t)" "INPROGRESS(i)" "WAITING(w@/!)"
