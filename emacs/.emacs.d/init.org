@@ -19,7 +19,6 @@
                       window-purpose
                       sr-speedbar
                       org-mode
-                      diminish
                       let-alist
                       imenu-list))
 #+END_SRC
@@ -257,7 +256,24 @@ abort completely with `C-g'."
     (setq Info-fontify-single-quote-flag t)
     :config 
     (define-key Info-mode-map [mouse-4]         'mwheel-scroll)
-    (define-key Info-mode-map [mouse-5]         'mwheel-scroll))
+    (define-key Info-mode-map [mouse-5]         'mwheel-scroll)
+    :ensure t)
+#+END_SRC
+*** Diminish
+#+BEGIN_SRC emacs-lisp
+  (req-package diminish
+    :config
+    (diminish 'visual-line-mode)
+    (diminish 'auto-revert-mode)
+    (diminish 'abbrev-mode)
+    (with-eval-after-load 'with-editor-mode
+      (diminish 'with-editor-mode))
+    (with-eval-after-load 'server
+      (setq minor-mode-alist
+            (delete '(server-buffer-clients " Server") minor-mode-alist)))
+    (eval-after-load "org-indent"
+      '(diminish 'org-indent-mode))
+    :ensure t)
 #+END_SRC
 ** Finish loading packages
 #+BEGIN_SRC emacs-lisp
