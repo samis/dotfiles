@@ -16,7 +16,6 @@
                       monokai-theme
                       unicode-fonts
                       spaceline
-                      info+ 
                       window-purpose
                       sr-speedbar
                       org-mode
@@ -248,6 +247,17 @@ abort completely with `C-g'."
 #+BEGIN_SRC emacs-lisp
   (req-package geiser
     :ensure t)
+#+END_SRC
+*** info+
+#+BEGIN_SRC emacs-lisp
+  (req-package info+
+    :init
+    (setq Info-fontify-quotations-flag t)
+    (setq Info-fontify-angle-bracketed-flag t)
+    (setq Info-fontify-single-quote-flag t)
+    :config 
+    (define-key Info-mode-map [mouse-4]         'mwheel-scroll)
+    (define-key Info-mode-map [mouse-5]         'mwheel-scroll))
 #+END_SRC
 ** Finish loading packages
 #+BEGIN_SRC emacs-lisp
