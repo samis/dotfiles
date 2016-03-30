@@ -14,7 +14,6 @@
                       better-defaults
                       req-package
                       monokai-theme
-                      magit
                       unicode-fonts
                       spaceline
                       info+
@@ -238,6 +237,12 @@ abort completely with `C-g'."
     :bind ("C-z" . undo-tree-undo)
     :config
     (global-undo-tree-mode 1)
+    :ensure t)
+#+END_SRC
+*** Magit
+#+BEGIN_SRC emacs-lisp
+  (req-package magit
+    :bind ("C-x g" . magit-status)
     :ensure t)
 #+END_SRC
 ** Finish loading packages
