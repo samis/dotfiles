@@ -16,11 +16,7 @@
                       monokai-theme
                       unicode-fonts
                       spaceline
-                      window-purpose
-                      sr-speedbar
-                      org-mode
-                      let-alist
-                      imenu-list))
+                      org-mode))
 #+END_SRC
 ** Load all of my random lisp libraries.
 #+BEGIN_SRC emacs-lisp
@@ -273,6 +269,42 @@ abort completely with `C-g'."
             (delete '(server-buffer-clients " Server") minor-mode-alist)))
     (eval-after-load "org-indent"
       '(diminish 'org-indent-mode))
+    :ensure t)
+#+END_SRC
+*** sr-speedbar
+#+BEGIN_SRC emacs-lisp
+  (req-package sr-speedbar
+    :init
+    (setq sr-speedbar-width 40)
+    (setq sr-speedbar-default-width 40)
+    (setq sr-speedbar-max-width 40)
+    (setq sr-speedbar-skip-other-window-p t)
+    (setq sr-speedbar-right-side nil)
+    (defun ad-advised-definition-p (definition)
+      "Return non-nil if DEFINITION was generated from advice information."
+      (if (or (ad-lambda-p definition)
+              (macrop definition)
+              (ad-compiled-p definition))
+          (let ((docstring (ad-docstring definition)))
+            (and (stringp docstring)
+                 (get-text-property 0 'dynamic-docstring-function docstring)))))
+    :config
+    (sr-speedbar-open)
+    (sr-speedbar-close)
+    :ensure t)
+#+END_SRC
+*** Purpose
+#+BEGIN_SRC emacs-lisp
+  (req-package window-purpose
+    :config
+    (require 'window-purpose-x)
+    (purpose-x-magit-single-on)
+    (add-to-list 'purpose-user-mode-purposes '(org-mode . org))
+    (add-to-list 'purpose-user-mode-purposes '(org-agenda-mode . org))
+    (add-to-list 'purpose-user-mode-purposes '(speedbar-mode . sidebar))
+    (purpose-compile-user-configuration)
+    (purpose-mode)
+    (purpose-load-window-layout "coding")
     :ensure t)
 #+END_SRC
 ** Finish loading packages
