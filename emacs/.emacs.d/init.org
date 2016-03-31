@@ -14,8 +14,6 @@
                       better-defaults
                       req-package
                       monokai-theme
-                      unicode-fonts
-                      spaceline
                       org-mode))
 #+END_SRC
 ** Load all of my random lisp libraries.
@@ -305,6 +303,17 @@ abort completely with `C-g'."
     (purpose-compile-user-configuration)
     (purpose-mode)
     (purpose-load-window-layout "coding")
+    :ensure t)
+#+END_SRC
+*** Spaceline
+#+BEGIN_SRC emacs-lisp
+  (req-package spaceline
+    :init
+    (setq powerline-default-separator 'wave)
+    :config
+    (require 'spaceline-config)
+    (spaceline-emacs-theme)
+    (spaceline-info-mode)
     :ensure t)
 #+END_SRC
 ** Finish loading packages
