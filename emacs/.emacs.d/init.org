@@ -13,7 +13,6 @@
   (setq my-packages '(el-get
                       better-defaults
                       req-package
-                      monokai-theme
                       org-mode))
 #+END_SRC
 ** Load all of my random lisp libraries.
@@ -303,6 +302,13 @@ abort completely with `C-g'."
     (purpose-compile-user-configuration)
     (purpose-mode)
     (purpose-load-window-layout "coding")
+    :ensure t)
+#+END_SRC
+*** Monokai theme
+#+BEGIN_SRC emacs-lisp
+  (req-package monokai-theme
+    :config
+    (load-theme 'monokai t)
     :ensure t)
 #+END_SRC
 *** Spaceline
