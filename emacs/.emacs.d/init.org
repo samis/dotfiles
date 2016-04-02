@@ -139,6 +139,49 @@ abort completely with `C-g'."
 #+BEGIN_SRC emacs-lisp
 (require 'req-package)
 #+END_SRC
+*** Monokai theme
+#+BEGIN_SRC emacs-lisp
+  (req-package monokai-theme
+    :config
+    (load-theme 'monokai t)
+    :ensure t)
+#+END_SRC
+*** Spaceline
+#+BEGIN_SRC emacs-lisp
+  (req-package spaceline
+    :init
+    (setq powerline-default-separator 'wave)
+    :config
+    (defun spaceline-my-theme (&rest additional-segments)
+      "Install a modeline close to the one used by Spacemacs, but which
+  looks better without third-party dependencies.
+  ADDITIONAL-SEGMENTS are inserted on the right, between `global' and
+  `buffer-position'."
+      (apply 'spaceline--theme
+             '(((((persp-name :fallback workspace-number)
+                  window-number) :separator "|")
+                buffer-modified)
+               :face highlight-face)
+             '(buffer-id buffer-size remote-host)
+             additional-segments))
+    (require 'spaceline-config)
+    (set-face-attribute 'spaceline-highlight-face nil :background "black" :foreground "green" :inherit 'mode-line)
+    (set-face-attribute 'spaceline-modified nil :background "red3" :foreground "yellow" :inherit 'mode-line)
+    (set-face-attribute 'spaceline-read-only nil :background "black" :foreground "green" :inherit 'mode-line)
+    (set-face-attribute 'spaceline-unmodified nil :background "black" :foreground "green" :inherit 'mode-line)
+    (set-face-attribute 'powerline-active1 nil :background "yellow" :foreground "black")
+    (set-face-attribute 'powerline-active2 nil :background "white")
+    (set-face-attribute 'powerline-inactive1 nil :background "yellow4" :foreground "black")
+    (set-face-attribute 'powerline-inactive2 nil :background "dim grey")
+    (set-face-attribute 'mode-line nil :background "green" :foreground "black")
+    (set-face-attribute 'mode-line nil :box '(:line-width 1 :color "#3E3D31" :style 'unspecified))
+    (set-face-attribute 'mode-line-buffer-id nil :foreground "black" :weight 'bold)
+    (set-face-attribute 'mode-line-inactive nil :background "dark green" :foreground "black")
+    (set-face-attribute 'mode-line-inactive nil :box '(:line-width 1 :color "#3E3D31" :style 'unspecified))
+    (spaceline-my-theme)
+    (spaceline-info-mode)
+    :ensure t)
+#+END_SRC
 *** Projectile
 #+BEGIN_SRC emacs-lisp
   (req-package projectile
@@ -302,24 +345,6 @@ abort completely with `C-g'."
     (purpose-compile-user-configuration)
     (purpose-mode)
     (purpose-load-window-layout "coding")
-    :ensure t)
-#+END_SRC
-*** Monokai theme
-#+BEGIN_SRC emacs-lisp
-  (req-package monokai-theme
-    :config
-    (load-theme 'monokai t)
-    :ensure t)
-#+END_SRC
-*** Spaceline
-#+BEGIN_SRC emacs-lisp
-  (req-package spaceline
-    :init
-    (setq powerline-default-separator 'wave)
-    :config
-    (require 'spaceline-config)
-    (spaceline-emacs-theme)
-    (spaceline-info-mode)
     :ensure t)
 #+END_SRC
 ** Finish loading packages
