@@ -34,3 +34,6 @@ ohmyzsh/
 /emacs/.emacs.d/ido.last
 /emacs/.emacs.d/ac-comphist.dat
 chrome-*
+sublimetext/.config/sublime-text-3/Cache
+sublimetext/.config/sublime-text-3/Packages/User/Package Control.cache
+sublimetext/.config/sublime-text-3/Local/Session.sublime_session
