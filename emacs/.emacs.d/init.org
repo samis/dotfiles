@@ -347,6 +347,11 @@ abort completely with `C-g'."
     (purpose-load-window-layout "coding")
     :ensure t)
 #+END_SRC
+*** Saltstack mode
+#+BEGIN_SRC emacs-lisp
+  (req-package salt-mode
+    :ensure t) 
+#+END_SRC
 ** Finish loading packages
 #+BEGIN_SRC emacs-lisp
 (req-package-finish)
