@@ -49,7 +49,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitignore gpg-agent git-extras sprunge web-search colored-man-pages extract safe-paste )
+plugins=(gitignore git-extras colored-man-pages extract safe-paste )
 
 # User configuration
 
@@ -60,11 +60,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='nano'
- else
-   export EDITOR='emacsclient'
- fi
+if [[ -n $SSH_CONNECTION ]]; then
+    export EDITOR='nano'
+else
+    export EDITOR='emacsclient'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -111,3 +111,5 @@ chef-mode-off() {
     export GEM_HOME=$ORIG_GHOME
     export GEM_SPEC_CACHE=$ORIG_GSPEC_CACHE
 }
+# GPG Agent, done right.
+eval $(gpg-agent --daemon --enable-ssh-support)
