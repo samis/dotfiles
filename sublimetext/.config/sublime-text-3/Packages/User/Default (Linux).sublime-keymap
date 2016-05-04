@@ -1,3 +1,5 @@
 [
-	{"keys": ["ctrl+x", "ctrl+f"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} }
+	{ "keys": ["ctrl+c"], "command": "copy" },
+	{ "keys": ["ctrl+v"], "command": "paste" },
+	{ "keys": ["alt+x"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
 ]

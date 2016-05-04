@@ -37,3 +37,5 @@ chrome-*
 sublimetext/.config/sublime-text-3/Cache
 sublimetext/.config/sublime-text-3/Packages/User/Package Control.cache
 sublimetext/.config/sublime-text-3/Local/Session.sublime_session
+sublimetext/.config/sublime-text-3/Installed Packages/
+sublimetext/.config/sublime-text-3/Local/
