@@ -2,4 +2,5 @@
 	{ "keys": ["ctrl+c"], "command": "copy" },
 	{ "keys": ["ctrl+v"], "command": "paste" },
 	{ "keys": ["alt+x"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+	{"keys": ["ctrl+x", "g"], "command": "git_status"},
 ]
