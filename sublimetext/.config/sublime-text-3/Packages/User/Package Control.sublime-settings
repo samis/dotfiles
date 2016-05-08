@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"GitGutter",
+		"iOpener",
 		"Package Control",
 		"sublemacspro",
 		"SublimeGit",
