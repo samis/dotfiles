@@ -7,6 +7,7 @@
 	[
 		"GitGutter",
 		"Package Control",
-		"sublemacspro"
+		"sublemacspro",
+		"SublimeGit"
 	]
 }
