@@ -9,3 +9,5 @@
 	user = samis
 [push]
 	default = matching
+[credential]
+	helper = store
