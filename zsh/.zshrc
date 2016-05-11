@@ -113,3 +113,5 @@ chef-mode-off() {
 }
 # GPG Agent, done right.
 eval $(gpg-agent --daemon --enable-ssh-support)
+# GNUstep application root
+export GNUSTEP_USER_ROOT="${HOME}/GNUstep"
