@@ -11,5 +11,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
     unset f
 fi
 gpg-connect-agent updatestartuptty /bye
+# Execute WindowMaker
+exec wmaker > ~/xsession.log 2>&1
 # Execute Enlightenment
-exec enlightenment_start > ~/xsession.log 2>&1 
+# exec enlightenment_start > ~/xsession.log 2>&1 
